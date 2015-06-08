@@ -15,6 +15,11 @@
 #
 def triangle(a, b, c)
   a, b, c = [a, b, c].sort()
+  
+  if a <= 0 or a + b <= c
+    fail TriangleError
+  end
+
   if a == b || b == c
     if a == c
       :equilateral
